@@ -53,6 +53,15 @@ const Hero = () => {
 
   return (
     <div className="relative h-[90vh] min-h-[600px] w-full overflow-hidden bg-razaq-green-900">
+      {/* Logo overlay */}
+      <div className="absolute top-4 left-4 z-30 bg-white/90 p-3 rounded-lg shadow-md">
+        <img 
+          src="/lovable-uploads/f9f7d793-1d11-44b1-aa06-202e4b0d5287.png" 
+          alt="Al-Razaq Traders" 
+          className="h-12 w-auto" 
+        />
+      </div>
+
       {slides.map((slide, index) => (
         <div
           key={slide.id}
