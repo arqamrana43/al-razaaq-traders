@@ -32,29 +32,34 @@ const FeaturedSection = () => {
             <h2 className="text-3xl font-heading font-medium text-razaq-green-900 mb-2">Featured Products</h2>
             <p className="text-razaq-green-600">Discover our selection of premium quality products</p>
           </div>
-          <div className="flex space-x-2">
-            <Button 
-              variant="outline" 
-              size="icon"
-              onClick={prevPage}
-              className="border-razaq-green-200 text-razaq-green hover:bg-razaq-green-50 hover:text-razaq-green-700"
-            >
-              <ChevronLeft size={20} />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="icon"
-              onClick={nextPage}
-              className="border-razaq-green-200 text-razaq-green hover:bg-razaq-green-50 hover:text-razaq-green-700"
-            >
-              <ChevronRight size={20} />
-            </Button>
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-razaq-green-600">
+              {currentPage + 1}/{totalPages}
+            </span>
+            <div className="flex space-x-2">
+              <Button 
+                variant="outline" 
+                size="icon"
+                onClick={prevPage}
+                className="border-razaq-green-200 text-razaq-green hover:bg-razaq-green-50 hover:text-razaq-green-700"
+              >
+                <ChevronLeft size={20} />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="icon"
+                onClick={nextPage}
+                className="border-razaq-green-200 text-razaq-green hover:bg-razaq-green-50 hover:text-razaq-green-700"
+              >
+                <ChevronRight size={20} />
+              </Button>
+            </div>
           </div>
         </div>
         
         <div className="product-grid">
           {currentProducts.map((product, index) => (
-            <div key={product.id} className="animated-element">
+            <div key={product.id} className="animated-element" style={{ animationDelay: `${index * 0.1}s` }}>
               <ProductCard product={product} featured />
             </div>
           ))}
