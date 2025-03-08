@@ -40,7 +40,14 @@ const Contact = () => {
   return (
     <div className="bg-razaq-cream-50 min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-razaq-green-900 overflow-hidden">
+      <div 
+        className="relative h-64 md:h-80 bg-razaq-green-900 overflow-hidden"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-razaq-green-900/90 to-razaq-green-800/70"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4">
@@ -217,24 +224,60 @@ const Contact = () => {
             Frequently Asked Questions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm animated-element">
-              <h3 className="text-lg font-medium text-razaq-green-700 mb-3">Do you offer bulk discounts?</h3>
-              <p className="text-razaq-green-600">Yes, we offer special pricing for bulk orders. Please contact our sales team directly for a customized quote.</p>
+            <div 
+              className="bg-white p-6 rounded-xl shadow-sm animated-element"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="bg-white/90 p-4 rounded-lg">
+                <h3 className="text-lg font-medium text-razaq-green-700 mb-3">Do you offer bulk discounts?</h3>
+                <p className="text-razaq-green-600">Yes, we offer special pricing for bulk orders. Please contact our sales team directly for a customized quote.</p>
+              </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm animated-element">
-              <h3 className="text-lg font-medium text-razaq-green-700 mb-3">What are your shipping options?</h3>
-              <p className="text-razaq-green-600">We offer standard and express shipping throughout Pakistan. Free shipping is available on orders over Rs. 2,000.</p>
+            <div 
+              className="bg-white p-6 rounded-xl shadow-sm animated-element"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="bg-white/90 p-4 rounded-lg">
+                <h3 className="text-lg font-medium text-razaq-green-700 mb-3">What are your shipping options?</h3>
+                <p className="text-razaq-green-600">We offer standard and express shipping throughout Pakistan. Free shipping is available on orders over Rs. 2,000.</p>
+              </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm animated-element">
-              <h3 className="text-lg font-medium text-razaq-green-700 mb-3">Can I return products?</h3>
-              <p className="text-razaq-green-600">Yes, unopened products can be returned within 14 days. Please refer to our return policy for more details.</p>
+            <div 
+              className="bg-white p-6 rounded-xl shadow-sm animated-element"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1614119075118-7ffef3a8bf69?q=80&w=1974&auto=format&fit=crop')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="bg-white/90 p-4 rounded-lg">
+                <h3 className="text-lg font-medium text-razaq-green-700 mb-3">Can I return products?</h3>
+                <p className="text-razaq-green-600">Yes, unopened products can be returned within 14 days. Please refer to our return policy for more details.</p>
+              </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm animated-element">
-              <h3 className="text-lg font-medium text-razaq-green-700 mb-3">How can I track my order?</h3>
-              <p className="text-razaq-green-600">You will receive a tracking number via email once your order ships. You can also check your order status in your account.</p>
+            <div 
+              className="bg-white p-6 rounded-xl shadow-sm animated-element"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2070&auto=format&fit=crop')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="bg-white/90 p-4 rounded-lg">
+                <h3 className="text-lg font-medium text-razaq-green-700 mb-3">How can I track my order?</h3>
+                <p className="text-razaq-green-600">You will receive a tracking number via email once your order ships. You can also check your order status in your account.</p>
+              </div>
             </div>
           </div>
         </div>
