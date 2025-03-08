@@ -47,7 +47,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/category/fertilizers" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
+                <Link to="/category/featured" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
                   Products
                 </Link>
               </li>
