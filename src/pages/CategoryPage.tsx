@@ -1,7 +1,7 @@
 
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { getProductsByCategory, getCategoryById } from "@/lib/data";
+import { getProductsByCategory, getCategoryById, CategoryType } from "@/lib/data";
 import ProductCard from "@/components/ui/ProductCard";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
@@ -11,7 +11,7 @@ const CategoryPage = () => {
   const { toast } = useToast();
   
   const category = categoryId ? getCategoryById(categoryId) : null;
-  const products = categoryId ? getProductsByCategory(categoryId) : [];
+  const products = categoryId ? getProductsByCategory(categoryId as CategoryType) : [];
 
   useEffect(() => {
     if (!category && categoryId) {
