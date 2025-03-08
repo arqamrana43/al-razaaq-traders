@@ -11,8 +11,7 @@ const slides = [
     subtitle: "For Your Daily Needs",
     description:
       "Find premium quality rice, lentils, flour, and more everyday essentials.",
-    image: "/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png",
-    fallbackImage: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=2070&auto=format&fit=crop",
     cta: "Shop Now",
     link: "/category/essentials",
   },
@@ -22,8 +21,7 @@ const slides = [
     subtitle: "From Farms to Your Table",
     description:
       "Discover our selection of finest basmati, brown, and specialty rice.",
-    image: "/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png",
-    fallbackImage: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?q=80&w=2070&auto=format&fit=crop",
     cta: "Explore Rice",
     link: "/category/rice",
   },
@@ -33,8 +31,7 @@ const slides = [
     subtitle: "For Healthier Plants",
     description:
       "Premium quality fertilizers to enhance your garden and farm yields.",
-    image: "/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png",
-    fallbackImage: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2070&auto=format&fit=crop",
     cta: "View Fertilizers",
     link: "/category/fertilizers",
   },
@@ -42,7 +39,6 @@ const slides = [
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,13 +49,6 @@ const Hero = () => {
 
   const handleDotClick = (index: number) => {
     setCurrentSlide(index);
-  };
-
-  const handleImageError = (slideIndex: number) => {
-    setImageErrors(prev => ({
-      ...prev,
-      [slideIndex]: true
-    }));
   };
 
   return (
@@ -82,10 +71,9 @@ const Hero = () => {
         >
           <div className="absolute inset-0 bg-black/30 z-10"></div>
           <img
-            src={imageErrors[index] ? slide.fallbackImage : slide.image}
+            src={slide.image}
             alt={slide.title}
             className="h-full w-full object-cover object-center"
-            onError={() => handleImageError(index)}
           />
           <div className="absolute inset-0 flex items-center z-20">
             <div className="container mx-auto px-4">
