@@ -23,7 +23,7 @@ import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
 
 const ProductDetail = () => {
-  const { id } = useParams<{ id: string }>();
+  const { productId } = useParams<{ productId: string }>();
   const { addToCart } = useCart();
   
   const [product, setProduct] = useState<Product | undefined>(undefined);
@@ -34,8 +34,8 @@ const ProductDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    if (id) {
-      const foundProduct = getProductById(id);
+    if (productId) {
+      const foundProduct = getProductById(productId);
       
       if (foundProduct) {
         setProduct(foundProduct);
@@ -46,11 +46,12 @@ const ProductDetail = () => {
         }, 300);
       }
     }
-  }, [id]);
+  }, [productId]);
 
   const handleAddToCart = () => {
     if (product) {
       addToCart(product, quantity);
+      toast.success(`Added ${quantity} ${product.name} to cart`);
     }
   };
 
