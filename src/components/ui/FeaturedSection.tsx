@@ -1,7 +1,8 @@
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { getFeaturedProducts } from "@/lib/data";
 
@@ -25,7 +26,7 @@ const FeaturedSection = () => {
   );
 
   return (
-    <section className="py-16 bg-razaq-cream-100">
+    <section id="featured-products" className="py-16 bg-razaq-cream-100">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -63,6 +64,15 @@ const FeaturedSection = () => {
               <ProductCard product={product} featured />
             </div>
           ))}
+        </div>
+        
+        <div className="flex justify-center mt-10">
+          <Link to="/cart">
+            <Button className="bg-razaq-green hover:bg-razaq-green-700 text-white">
+              <ShoppingCart size={18} className="mr-2" />
+              View Cart
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

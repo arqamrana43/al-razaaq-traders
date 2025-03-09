@@ -56,6 +56,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/cart" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
+                  Cart
+                </Link>
+              </li>
             </ul>
           </div>
 
