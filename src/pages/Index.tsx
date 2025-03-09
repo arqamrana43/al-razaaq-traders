@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,41 +8,32 @@ import CategoryCard from "@/components/ui/CategoryCard";
 import ProductCard from "@/components/ui/ProductCard";
 import { categories, getNewProducts } from "@/lib/data";
 import { Leaf, Package, Truck, Star, Users, ShieldCheck } from "lucide-react";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Ahmed Khan",
-    role: "Regular Customer",
-    content: "Al-Razaq Traders has been my go-to for daily groceries for years. Their rice quality is unmatched in the area!",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Fatima Aziz",
-    role: "Home Chef",
-    content: "As someone who cooks daily, I appreciate the quality and freshness of their lentils and flour. Great customer service too!",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Mohammad Ali",
-    role: "Small Business Owner",
-    content: "Their wholesale options have helped my small restaurant maintain consistent quality. The delivery is always on time.",
-    rating: 4,
-  },
-];
-
+const testimonials = [{
+  id: 1,
+  name: "Ahmed Khan",
+  role: "Regular Customer",
+  content: "Al-Razaq Traders has been my go-to for daily groceries for years. Their rice quality is unmatched in the area!",
+  rating: 5
+}, {
+  id: 2,
+  name: "Fatima Aziz",
+  role: "Home Chef",
+  content: "As someone who cooks daily, I appreciate the quality and freshness of their lentils and flour. Great customer service too!",
+  rating: 5
+}, {
+  id: 3,
+  name: "Mohammad Ali",
+  role: "Small Business Owner",
+  content: "Their wholesale options have helped my small restaurant maintain consistent quality. The delivery is always on time.",
+  rating: 4
+}];
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const newProducts = getNewProducts();
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
-  return (
-    <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+  return <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
       <Hero />
 
       {/* Categories Section */}
@@ -57,16 +47,11 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category, index) => (
-              <div key={category.id} className="animated-element" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CategoryCard
-                  title={category.name}
-                  image={category.image}
-                  link={`/category/${category.id}`}
-                  description={category.description}
-                />
-              </div>
-            ))}
+            {categories.map((category, index) => <div key={category.id} className="animated-element" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
+                <CategoryCard title={category.name} image={category.image} link={`/category/${category.id}`} description={category.description} />
+              </div>)}
           </div>
         </div>
       </section>
@@ -87,11 +72,11 @@ const Index = () => {
           </div>
 
           <div className="product-grid">
-            {newProducts.slice(0, 4).map((product, index) => (
-              <div key={product.id} className="animated-element" style={{ animationDelay: `${index * 0.1}s` }}>
+            {newProducts.slice(0, 4).map((product, index) => <div key={product.id} className="animated-element" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <ProductCard product={product} />
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -107,12 +92,13 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className="glass-card p-6 animated-element" style={{ animationDelay: `${index * 0.1}s` }}>
+            {testimonials.map((testimonial, index) => <div key={testimonial.id} className="glass-card p-6 animated-element" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="flex mb-2">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} size={16} className="fill-razaq-gold text-razaq-gold" />
-                  ))}
+                  {Array.from({
+                length: testimonial.rating
+              }).map((_, i) => <Star key={i} size={16} className="fill-razaq-gold text-razaq-gold" />)}
                 </div>
                 <p className="text-razaq-green-700 mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
@@ -124,8 +110,7 @@ const Index = () => {
                     <p className="text-sm text-razaq-green-600">{testimonial.role}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -237,11 +222,7 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="aspect-square rounded-xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1573555657105-77ec4456eeb7?q=80&w=1974&auto=format&fit=crop"
-                  alt="Al-Razaq Store"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Al-Razaq Store" className="w-full h-full object-cover" src="/lovable-uploads/2cab3b55-5584-4cba-9013-d24740df5c58.png" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg max-w-xs">
                 <p className="text-razaq-green-900 font-medium">
@@ -278,8 +259,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
