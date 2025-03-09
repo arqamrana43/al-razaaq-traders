@@ -3,6 +3,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+
 const Contact = () => {
   const {
     toast
@@ -14,6 +15,7 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -24,6 +26,7 @@ const Contact = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -43,6 +46,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }, 1500);
   };
+
   return <div className="bg-razaq-cream-50 min-h-screen">
       {/* Hero Section */}
       <div className="relative h-64 md:h-80 bg-razaq-green-900 overflow-hidden" style={{
@@ -165,9 +169,9 @@ const Contact = () => {
                 Our Location
               </h2>
               <div className="aspect-video rounded-md overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13611.284535434327!2d74.3070354754277!3d31.5843298536692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191aa6bd1a2f33%3A0xc35cae32c7a50374!2sAnarkali%20Bazaar!5e0!3m2!1sen!2s!4v1634567890000!5m2!1sen!2s" width="100%" height="100%" style={{
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6277.064079668294!2d74.5808805!3d32.2069249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ecb6465b52937%3A0xd22c375837bbe7!2sAl-Razaq%20Traders!5e1!3m2!1sen!2s!4v1741486496345!5m2!1sen!2s" width="100%" height="100%" style={{
                 border: 0
-              }} allowFullScreen loading="lazy" title="Store Location"></iframe>
+              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Store Location"></iframe>
               </div>
             </div>
           </div>
@@ -228,4 +232,5 @@ const Contact = () => {
       </div>
     </div>;
 };
+
 export default Contact;
