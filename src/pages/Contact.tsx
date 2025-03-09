@@ -119,8 +119,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-razaq-green-700">Phone</h3>
-                    <p className="mt-1 text-base">+92 300 1234567</p>
-                    <p className="text-base">+92 42 35777123</p>
+                    <p className="mt-1 text-base">+92 342 6378084</p>
+                    <p className="text-base">+92 344 0612781</p>
                   </div>
                 </div>
                 
@@ -130,8 +130,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-razaq-green-700">Email</h3>
-                    <p className="mt-1 text-base">info@alrazaqtraders.com</p>
-                    <p className="text-base">support@alrazaqtraders.com</p>
+                    <p className="mt-1 text-base">info@al-razaq-traders.42web.io</p>
+                    <p className="text-base">support@al-razaq-traders.42web.io</p>
                   </div>
                 </div>
                 
@@ -142,7 +142,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-sm font-medium text-razaq-green-700">Address</h3>
                     <p className="mt-1 text-base">6H6M+M4H, Gujranwala Pasrur Rd, Chicharwali Bajwa Pasrūr, 51250</p>
-                    <p className="text-base">, Chicharwali Bajwa Pasrūr, 51250</p>
+                    <p className="text-base">Chicharwali Bajwa Pasrūr, 51250</p>
                   </div>
                 </div>
                 
