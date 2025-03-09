@@ -1,20 +1,13 @@
-
 import { Link } from "react-router-dom";
 import { Leaf, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-razaq-green-900 text-white pt-16 pb-8">
+  return <footer className="bg-razaq-green-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img
-                src="/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png"
-                alt="Al-Razaq Traders"
-                className="h-16 w-auto mb-4 brightness-200"
-              />
+              <img src="/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png" alt="Al-Razaq Traders" className="h-16 w-auto mb-4 brightness-200" />
             </Link>
             <p className="text-razaq-cream-300 text-sm leading-relaxed">
               Your trusted source for quality grocery items including fertilizers, rice, lentils, flour and daily essentials.
@@ -102,13 +95,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-razaq-gold mt-1 flex-shrink-0" />
-                <span className="text-razaq-cream-300 text-sm">
-                  123 Market Street, Karachi, Pakistan
-                </span>
+                <span className="text-razaq-cream-300 text-sm">6H6M+M4H, Gujranwala Pasrur Rd, Chicharwali Bajwa Pasrūr, 51250</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-razaq-gold flex-shrink-0" />
-                <span className="text-razaq-cream-300 text-sm">+92 300 1234567</span>
+                <span className="text-razaq-cream-300 text-sm">+92 342 6378084</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-razaq-gold flex-shrink-0" />
@@ -123,8 +114,6 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Al-Razaq Traders. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
