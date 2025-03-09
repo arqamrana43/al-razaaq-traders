@@ -7,7 +7,7 @@ const Footer = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img src="/lovable-uploads/e3ff483d-21b7-4180-ac53-90967d609c8d.png" alt="Al-Razaq Traders" className="h-16 w-auto mb-4 brightness-200" />
+              <img alt="Al-Razaq Traders" className="h-16 w-auto mb-4 brightness-200" src="/lovable-uploads/f9a3d957-3284-4533-9af8-693d4760f757.png" />
             </Link>
             <p className="text-razaq-cream-300 text-sm leading-relaxed">
               Your trusted source for quality grocery items including fertilizers, rice, lentils, flour and daily essentials.
