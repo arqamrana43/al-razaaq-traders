@@ -66,9 +66,7 @@ const Index = () => {
               <h2 className="text-3xl font-heading font-medium text-razaq-green-900 mb-2">New Arrivals</h2>
               <p className="text-razaq-green-600">Check out our latest products</p>
             </div>
-            <Link to="/category/new" className="text-razaq-green font-medium hover:text-razaq-green-700 transition-colors inline-flex items-center group">
-              View All <span aria-hidden="true" className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
+           
           </div>
 
           <div className="product-grid">
