@@ -1,5 +1,7 @@
+
 import { Link } from "react-router-dom";
-import { Leaf, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Leaf, Phone, Mail, MapPin, Instagram, Facebook, Twitter, ShoppingCart } from "lucide-react";
+
 const Footer = () => {
   return <footer className="bg-razaq-green-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -40,7 +42,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/category/featured" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
+                <Link to="/#featured-products" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
                   Products
                 </Link>
               </li>
@@ -50,7 +52,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/cart" className="text-razaq-cream-300 hover:text-white transition-colors text-sm">
+                <Link to="/cart" className="text-razaq-cream-300 hover:text-white transition-colors text-sm flex items-center gap-2">
+                  <ShoppingCart size={16} />
                   Cart
                 </Link>
               </li>
