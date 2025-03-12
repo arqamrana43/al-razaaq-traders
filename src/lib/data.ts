@@ -105,7 +105,7 @@ export const products: Product[] = [
     discount: 0,
     discountedPrice: 1200,
     description: "Dual-action formula that feeds your lawn and controls weeds. Perfect for maintaining a beautiful lawn.",
-    image: "https://www.newzealandlawnaddicts.com/wp-content/uploads/2023/08/078A7330.jpg",
+    image: "https://cdn11.bigcommerce.com/s-o2rv5d0tql/images/stencil/640w/products/24242/2734574/251865__20739.1707429784.png?c=2",
     stock: 20,
     weight: "3 kg",
     isNew: false,
